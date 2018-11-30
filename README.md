@@ -8,7 +8,7 @@ For more information, contact Beverly Tan at s1550222@sms.ed.ac.uk.
 
 This repository will contain the following: 
 - [Code folder](code)
-  - [Soils R script](data/soils-script.R)
+  - [Soils R script](code/soils-script.R)
 - [Data folder](data)
   - [Soils raw data](data/soils-raw.csv)
 - [Intermediate products folder](int-pdt)
