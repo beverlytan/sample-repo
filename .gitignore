@@ -1,4 +1,5 @@
 # Prevent users from committing their own RProject
+.Rproj.user
 *.Rproj.user
 *.Rproj
 
