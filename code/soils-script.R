@@ -4,21 +4,26 @@
 
 # Loading packages and data ---- 
 
+# Load libraries 
 library(tidyverse)
 
+# Load raw data from "data" folder  
 soils_raw <- read_csv("data/soils-raw.csv")
 
 # Preparing data for analysis ---- 
 
+# Cleaning data and obtaining necessary information
 soils <- soils_raw %>%
   select(site_num, sample_num, habitat, soil_pH) %>%
   group_by(site_num, habitat) %>%
   summarise(average = mean(soil_pH))
 
+# Saving cleaned dataframe as a csv file 
 write.csv(soils, file = "int-pdt/soils-cleaned.csv")
 
 # Creating a boxplot ---- 
 
+# Using ggplot to create our boxplot 
 (boxplot <- ggplot(soils, aes(habitat, average)) + 
    geom_boxplot(aes(fill = habitat)) + 
    scale_fill_manual(values = c("#b3e0ff", "#ffe6cc")) + 
@@ -33,11 +38,12 @@ write.csv(soils, file = "int-pdt/soils-cleaned.csv")
          plot.margin = unit(c(0.5,0.5,0.5,0.5), units = , "cm"),            
          legend.position = "none"))    
 
+# Using ggsave to save our boxplot as a png file
 ggsave(boxplot, file = "final-pdt/boxplot.png")
 
 # Conducting anova ---- 
 
-soils_lm <- lm(average ~ habitat, data = soils)
+soils_lm <- lm(average ~ habitat, dat = soils)
 
 anova(soils_lm)        
 
