@@ -40,11 +40,3 @@ write.csv(soils, file = "int-pdt/soils-cleaned.csv")
 
 # Using ggsave to save our boxplot as a png file
 ggsave(boxplot, file = "final-pdt/boxplot.png")
-
-# Conducting anova ---- 
-
-soils_lm <- lm(average ~ habitat, dat = soils)
-
-anova(soils_lm)        
-
-
