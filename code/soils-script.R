@@ -5,7 +5,14 @@
 # Loading packages and data ---- 
 
 # Load libraries 
-library(tidyverse)
+library(readr)            # Required for loading data
+library(dplyr)            # Required for manipulating data
+library(ggplot2)          # Required for creating boxplot
+
+# If you do not have these packages installed, install them with the following code: 
+# install.packages(ggplot2)
+# install.packages(dplyr)
+# install.packages(readr)
 
 # Load raw data from "data" folder  
 soils_raw <- read_csv("data/soils-raw.csv")
