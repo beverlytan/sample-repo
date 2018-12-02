@@ -4,7 +4,7 @@
 
 # Loading packages and data ---- 
 
-# Load libraries 
+# Load packages 
 library(readr)            # Required for loading data
 library(dplyr)            # Required for manipulating data
 library(ggplot2)          # Required for creating boxplot
