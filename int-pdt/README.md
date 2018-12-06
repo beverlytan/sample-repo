@@ -1,3 +1,6 @@
 ## Intermediate products folder
 
-This folder will contain all the intermediate products developed for this project, including cleaned data and intermediate figures. 
+This folder contain all the intermediate products developed for this project: 
+
+- [Cleaned dataset used in analysis](soils-cleaned.csv)
+
