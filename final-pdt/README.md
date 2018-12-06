@@ -1,3 +1,5 @@
 ## Final products folder
 
-This folder will contain the final products developed for this project. 
+This folder contains the final products developed for this project. 
+
+- [Boxplot of soil pH by habitat](boxplot.png)
